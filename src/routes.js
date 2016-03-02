@@ -2,6 +2,7 @@ const Router = require('koa-router');
 const parse = require('co-body');
 const todosSvc =  require('./todosSvc');
 const config = require('./config');
+const suspiciousSvc = require('./suspiciousSvc');
 
 const router = new Router({
   prefix: '/api'
@@ -40,6 +41,10 @@ router
     const id = Number(this.params.id);
     yield todosSvc.remove(id);
     this.status = 200;
+  })
+  .get('/susp', function*(){
+    this.body =  yield suspiciousSvc();
+    this.type = 'html';
   });
 
 module.exports = router.routes.bind(router);
