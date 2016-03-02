@@ -10,7 +10,7 @@
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/setup.js",
     "test:watch": "npm test -- --watch"
   },
-  "devDependencies": {
+  "dependencies": {
     "babel-core": "^6.3.15",
     "babel-eslint": "^5.0.0-beta4",
     "babel-loader": "^6.2.0",
@@ -44,9 +44,7 @@
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
-    "webpack-hot-middleware": "^2.6.0"
-  },
-  "dependencies": {
+    "webpack-hot-middleware": "^2.6.0",
     "babel-polyfill": "^6.5.0",
     "bluebird": "^3.3.1",
     "classnames": "^2.2.3",
