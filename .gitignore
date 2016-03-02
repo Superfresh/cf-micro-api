@@ -36,5 +36,5 @@ node_modules
 # Webstorm
 .idea
 
-#dist
-client/dist
+# Client build folder
+# client/dist
